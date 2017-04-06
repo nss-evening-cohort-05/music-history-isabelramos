@@ -1,0 +1,34 @@
+{
+  "playlist_1": [
+    {
+      "song": "Flow With It (You Got Me Feeling Like)",
+      "album": "Sea of Noise",
+      "artist": "St. Paul and the Broken Bones",
+      "genre": "Soul"
+    },
+    {
+      "song": "Be Careful With a Fool",
+      "album": "Johnny Winter",
+      "artist": "Johnny Winter",
+      "genre": "Blues"
+    },
+    {
+      "song": "Used To",
+      "album": "Vitals",
+      "artist": "Mutemath",
+      "genre": "Indie"
+    },
+    {
+      "song": "Leave A Trace",
+      "album": "Every Open Eye",
+      "artist": "CHVCHES",
+      "genre": "Indie"
+    },
+    {
+      "song": "If You Think You're Lonely Now",
+      "album": "The Poet",
+      "artist": "Bobby Womack",
+      "genre": "Soul"
+    }
+  ]
+}
