@@ -1,38 +1,43 @@
 var playlistContainer = document.getElementById("playlist");
-var songs = [];
+var showMoreButtonDiv = document.getElementById("show-more");
+var showMoreButton = document.getElementsByClassName("show-more");
 
-function printSongsToDom (data, bothPlaylists) {
+function printSongsToDom (data, playlist) {
 	var currentSong;
 	var songString = "";
 
-	for (var i=0; i < data[bothPlaylists].length; i++){
-		currentSong = data[bothPlaylists][i];
+	for (var i=0; i < data[playlist].length; i++){
+		currentSong = data[playlist][i];
 
 		songString += `<div>`;
 		songString += `<h2>${currentSong.song}</h2>`;
 		songString += `${currentSong.artist} | ${currentSong.album} | ${currentSong.genre}` + `<br><br>`;
 		songString += `<button class="delete-song">Delete</button>`
 		songString += `</div>`;
-		playlistContainer.innerHTML = songString;
-	}		
+	}	
+	playlistContainer.innerHTML += songString;
 }
 
-function deleteSong (event) {
+
+document.body.addEventListener("click", function () {
 	if (event.target.className === "delete-song") {
-		console.log(event);
 		event.target.parentElement.remove();
 	}
-}
+});
 
-document.body.addEventListener("click", deleteSong);
+showMoreButtonDiv.addEventListener("click", function() {
+	secondXhr();
+	// showMoreButton.classList.add("disabled");
+});
 
-function executeThisCodeAfterFileLoadBothPlaylists () {
+function executeThisCodeAfterFileLoadPlaylist () {
 	var data = JSON.parse(this.responseText);
 	// for (variable in object)
 	for (key in data) {
-		var bothPlaylists = key;
-		printSongsToDom(data, bothPlaylists);	
+		var playlist = key;
+		printSongsToDom(data, playlist);
 	} 
+	console.log(data);
 }
 
 function executeThisCodeAfterFileFail () {
@@ -40,13 +45,18 @@ function executeThisCodeAfterFileFail () {
 }
 
 var myFirstRequest = new XMLHttpRequest();
-myFirstRequest.addEventListener("load", executeThisCodeAfterFileLoadBothPlaylists);
+myFirstRequest.addEventListener("load", executeThisCodeAfterFileLoadPlaylist);
 myFirstRequest.addEventListener("error", executeThisCodeAfterFileFail);
 myFirstRequest.open("GET", "playlist-1.json");
 myFirstRequest.send();
 
-var mySecondRequest = new XMLHttpRequest();
-mySecondRequest.addEventListener("load", executeThisCodeAfterFileLoadBothPlaylists);
-mySecondRequest.addEventListener("error", executeThisCodeAfterFileFail);
-mySecondRequest.open("GET", "playlist-2.json");
-mySecondRequest.send();
+function secondXhr () {
+	var mySecondRequest = new XMLHttpRequest();
+	mySecondRequest.addEventListener("load", executeThisCodeAfterFileLoadPlaylist);
+	mySecondRequest.addEventListener("error", executeThisCodeAfterFileFail);
+	mySecondRequest.open("GET", "playlist-2.json");
+	mySecondRequest.send();
+}
+
+
+

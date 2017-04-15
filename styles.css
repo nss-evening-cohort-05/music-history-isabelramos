@@ -37,11 +37,13 @@ nav ul li {
 	padding: 1% 0 0 1%;
 }
 
-#playlist {
+#container {
 	margin: 1% 0 0 1%;
 	background-color: #FEFAC0;
 	border: 2px solid black;
 	min-width: 75%;
+	height: 400px;
+	overflow: auto;
 	padding-left: 2%;
 }
 
@@ -65,7 +67,13 @@ nav ul li {
 	margin-top: 10%;
 }
 
+.delete-song {
+	margin-bottom: 1%;
+}
 
+#show-more {
+	margin: 2% 0;
+}
 
 
 
