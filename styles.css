@@ -1,0 +1,90 @@
+body {
+	font-family: "Helvetica", sans-serif;
+	font-size: .9rem;
+}
+
+.song-name {
+	padding-top: 2.5%;
+	font-size: 1.75rem;
+	color: #785616;
+}
+
+nav {
+	background-color: #FFB4B0;
+	border: 2px solid black;
+	display: inline-flex;
+	min-width: 100%;
+	height: 10%;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+.main-content {
+	display: inline-flex;
+	min-width: 100%;
+	align-self: stretch;
+	justify-content: space-around;
+}
+
+.sidebar {
+	margin-top: 1%;
+	background-color: #4DD7FA;
+	border: 2px solid black;
+	min-width: 20%;
+	padding: 1% 0 0 1%;
+}
+
+#container {
+	margin: 1% 0 0 1%;
+	background-color: #FEFAC0;
+	border: 2px solid black;
+	min-width: 75%;
+	height: 400px;
+	overflow: auto;
+	padding-left: 2%;
+}
+
+.song-length {
+	padding-bottom: 5%;
+}
+
+.artist-dropdown {
+	padding-bottom: 10%;
+}
+
+.album-dropdown {
+	padding-bottom: 10%;
+}
+
+.genre-checkbox {
+	padding: 0 5% 5% 5%;
+}
+
+.filter {
+	margin-top: 10%;
+}
+
+.delete-song {
+	margin-bottom: 1%;
+}
+
+#show-more {
+	margin: 2% 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

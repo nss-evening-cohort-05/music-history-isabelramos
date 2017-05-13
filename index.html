@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MUSIC HISTORY.</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+
+	<nav>
+		<ul>
+			<li><a href="#">View Music</a> | </li>
+			<li><a href="#">Add Music</a> | </li>
+			<li><a href="#">Profile</a></li>
+		</ul>
+	</nav>
+
+	<div class="main-content">
+		<div class="sidebar">
+				
+			<div class="song-length">
+				<label>Song Length:</label><br>
+				<input type="range">
+			</div>
+
+			<div class="artist-dropdown">
+				<label for="artist">Artist:</label><br>
+				<select name="artist">
+					<option value="">Option #1</option>
+					<option value="">Option #2</option>
+					<option value="">Option #3</option>
+					<option value="">Option #4</option>
+					<option value="">Option #5</option>
+				</select>
+
+				</div>
+
+			<div class="album-dropdown">
+				<label for="album">Album:</label><br>
+				<select name="album">
+					<option value="">Option #1</option>
+					<option value="">Option #2</option>
+					<option value="">Option #3</option>
+					<option value="">Option #4</option>
+					<option value="">Option #5</option>
+				</select>
+			</div>
+
+			<label for="genre">Genre:</label><br><br>
+			<div class="genre-checkbox">
+
+				<div class="checkbox-1">
+					<input type="checkbox" name="rock" value="Rock">
+					<label for="rock">Rock</label>
+				</div>
+
+				<div class="checkbox-2">
+					<input type="checkbox" name="pop" value="Pop">
+					<label for="pop">Pop</label>
+				</div>
+
+				<div class="checkbox-3">
+					<input type="checkbox" name="blues" value="Blues">
+					<label for="blues">Blues</label>
+				</div>
+					
+				<div class="checkbox-4">
+					<input type="checkbox" name="soul" value="Soul">
+					<label for="soul">Soul</label>
+				</div>
+
+				<div class="checkbox-5">
+					<input type="checkbox" name="indie" value="Indie">
+					<label for="indie">Indie</label>
+				</div>
+
+				<button type="button" class="filter">Filter</button>
+
+			</div>
+		</div>
+
+			<div id="container">
+				<div id="playlist"></div>
+					<div>
+						<button id="show-more" class="show-more">Show More</button>
+					</div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="songs.js"></script>
+	</body>
+</html>
